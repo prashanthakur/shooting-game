@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Fira Sans', sans-serif;
+}
+button{
+    cursor: pointer !important;
+    color:rgb(202, 51, 83) !important;
+    font-weight: bold !important;
+}
+.container img{
+    height: 200px;
+    width:200px;
+}
+span{
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+}
+.right{
+    text-align: right;
+}
+.left-bullet-anime{
+    animation: anime 1s ease;
+}
+.right-bullet-anime{
+    animation: animeright 1s ease;
+}
+h3,h4{
+    letter-spacing: 3px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #268f95;
+}
+ 
+.scorecard{
+    background-color:#dbedf1;
+    padding: 10px;
+    height:170px;
+    width: 400px;
+    margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bullet{
+    height:80px !important;
+    width:80px !important;
+    position: absolute !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right-bullet{
+    margin-right: 140px;
+    /*margin-right: 80px !important;*/
+    top:214px;
+    right:183px;
+    transform: rotate(180deg);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.round-winner-text{
+    position: absolute;
+    bottom: 50px;
+    left:10px;
+    border-bottom: 2px solid #268f95;
+}
+.round-winner-text-display{
+    display: none;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes anime{
+    0%{
+        margin-left: 20px;
+    }
+    100%{
+        margin-left: 550px;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes animeright{
+    0%{
+        margin-right: 20px;
+    }
+    100%{
+        margin-right: 550px;
+    }
 }
